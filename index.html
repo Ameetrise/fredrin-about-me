@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Amit Bhattarai — software engineer in Baton Rouge, Louisiana. Mobile engineering, production releases, and independently launched products.">
+  <title>Amit Bhattarai — About Me</title>
+  <style>
+    :root { color-scheme: light; --ink: #202d2b; --muted: #54635f; --green: #215b46; --line: #d8dfd8; --paper: #f7f8f3; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 17px; line-height: 1.65; }
+    .wrap { width: min(1080px, calc(100% - 48px)); margin-inline: auto; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-block: 25px; border-bottom: 1px solid var(--line); }
+    .brand { font-weight: 750; letter-spacing: -.04em; font-size: 23px; }
+    .context, .eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .13em; }
+    .context { color: var(--muted); text-align: right; }
+    .hero { padding: 76px 0 56px; max-width: 830px; }
+    .eyebrow { color: var(--green); margin: 0 0 18px; }
+    h1 { font-size: clamp(43px, 7vw, 76px); line-height: 1.06; letter-spacing: -.065em; font-weight: 650; margin: 0 0 26px; }
+    .intro { font-size: clamp(19px, 2.3vw, 23px); line-height: 1.55; max-width: 760px; margin: 0 0 17px; }
+    .bio { max-width: 680px; color: var(--muted); margin: 0; }
+    .facts { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 25px; font-size: 14px; color: var(--green); }
+    .facts span::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--green); margin-right: 9px; vertical-align: middle; }
+    .section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+    h2 { font-size: 27px; letter-spacing: -.04em; line-height: 1.25; margin: 0; font-weight: 650; }
+    .section-heading span { font-size: 13px; color: var(--muted); }
+    article { display: grid; grid-template-columns: 48px minmax(0, 1fr) minmax(0, 1.2fr); gap: 25px; padding: 31px 0; border-bottom: 1px solid var(--line); }
+    .number { color: var(--green); font-size: 13px; font-variant-numeric: tabular-nums; padding-top: 5px; }
+    h3 { font-size: 22px; line-height: 1.3; letter-spacing: -.035em; margin: 0 0 10px; font-weight: 650; }
+    article p { color: var(--muted); font-size: 15px; line-height: 1.65; margin: 0; }
+    dl { margin: 0; min-width: 0; }
+    .url-row + .url-row { margin-top: 12px; }
+    dt { font-size: 11px; text-transform: uppercase; letter-spacing: .09em; font-weight: 700; color: var(--muted); margin-bottom: 2px; }
+    dd { margin: 0; font-size: 14px; overflow-wrap: anywhere; }
+    .contact { margin-top: 64px; padding: 38px; background: #e9eee5; border: 1px solid #d7dfd2; border-radius: 12px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 38px; }
+    .contact p { margin: 12px 0 22px; color: var(--muted); font-size: 15px; }
+    .button { display: inline-block; padding: 13px 22px; background: var(--green); color: white; border-radius: 6px; text-decoration: none; font-size: 15px; font-weight: 650; text-align: center; }
+    .button:hover { background: #154332; }
+    a:focus-visible { outline: 3px solid #b26a18; outline-offset: 5px; }
+    .email { display: block; margin-top: 11px; font-size: 14px; overflow-wrap: anywhere; }
+    .contact dl { align-self: center; }
+    .contact .url-row + .url-row { margin-top: 17px; }
+    footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; padding: 28px 0 36px; font-size: 12px; color: var(--muted); }
+    @media (max-width: 700px) {
+      .wrap { width: calc(100% - 36px); }
+      header { padding-block: 19px; }
+      .context { max-width: 150px; font-size: 10px; }
+      .hero { padding: 48px 0 40px; }
+      .facts { display: grid; gap: 7px; }
+      .section-heading span { display: none; }
+      article { grid-template-columns: 28px minmax(0, 1fr); gap: 10px 12px; padding-block: 26px; }
+      article dl { grid-column: 2; margin-top: 6px; }
+      .contact { grid-template-columns: minmax(0, 1fr); padding: 25px 21px; margin-top: 40px; gap: 28px; }
+      h2 { font-size: 25px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="brand" aria-label="Amit Bhattarai">AB.</span>
+      <span class="context">About me / Fredrin application</span>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="intro-title">
+        <p class="eyebrow">Software engineer · Product builder</p>
+        <h1 id="intro-title">I’m Amit Bhattarai.</h1>
+        <p class="intro">I build software and take it all the way to launch.</p>
+        <p class="bio">I’m a software engineer based in Baton Rouge, Louisiana, with 10+ years in software development and 8+ years in mobile. I’ve led production engineering work, owned releases, and built and launched my own products.</p>
+        <div class="facts"><span>Baton Rouge, Louisiana</span><span>I’m authorized to work in the U.S. without sponsorship.</span></div>
+      </section>
+      <section aria-labelledby="projects-title">
+        <div class="section-heading"><h2 id="projects-title">Featured Projects</h2><span>Selected work, built and shipped</span></div>
+        <article>
+          <span class="number" aria-hidden="true">01</span>
+          <div><h3>First Stop Health</h3><p>I led mobile engineering work, helped re-architect the app, and owned store and over-the-air releases.</p></div>
+          <dl>
+            <div class="url-row"><dt>iOS</dt><dd>https://apps.apple.com/us/app/first-stop-health/id1250975209</dd></div>
+            <div class="url-row"><dt>Android</dt><dd>https://play.google.com/store/apps/details?id=com.firststophealth</dd></div>
+            <div class="url-row"><dt>Web app</dt><dd>https://app.firststophealth.com/</dd></div>
+          </dl>
+        </article>
+        <article>
+          <span class="number" aria-hidden="true">02</span>
+          <div><h3>Smart Piano Coach</h3><p>I built a piano practice app with microphone and MIDI input using React Native and Expo.</p></div>
+          <dl>
+            <div class="url-row"><dt>iOS</dt><dd>https://apps.apple.com/us/app/smart-piano-coach/id6800557314</dd></div>
+            <div class="url-row"><dt>Android</dt><dd>https://play.google.com/store/apps/details?id=com.smartpianocoach.app</dd></div>
+            <div class="url-row"><dt>Website</dt><dd>https://www.smartpianocoach.com/</dd></div>
+          </dl>
+        </article>
+        <article>
+          <span class="number" aria-hidden="true">03</span>
+          <div><h3>XcelPay Wallet</h3><p>I worked on the mobile wallet app.</p></div>
+          <dl><div class="url-row"><dt>Android</dt><dd>https://play.google.com/store/apps/details?id=com.XcelTrip.XcelPay</dd></div></dl>
+        </article>
+        <article>
+          <span class="number" aria-hidden="true">04</span>
+          <div><h3>BeyondPendants</h3><p>I built a full-stack e-commerce site with React, Node.js, and Stripe checkout.</p></div>
+          <dl><div class="url-row"><dt>Website</dt><dd>https://beyondpendants.com/</dd></div></dl>
+        </article>
+      </section>
+      <section class="contact" aria-labelledby="contact-title">
+        <div>
+          <h2 id="contact-title">How to Reach Me</h2>
+          <p>I’d love to talk about what I can build with your team.</p>
+          <a class="button" href="mailto:ameetrise@gmail.com">Let’s Talk! Email Me</a>
+          <span class="email">ameetrise@gmail.com</span>
+        </div>
+        <dl>
+          <div class="url-row"><dt>Phone</dt><dd>337-267-6999</dd></div>
+          <div class="url-row"><dt>Portfolio</dt><dd>https://www.amitbhattarai.com/</dd></div>
+          <div class="url-row"><dt>GitHub</dt><dd>https://github.com/ameetrise</dd></div>
+        </dl>
+      </section>
+    </main>
+    <footer><span>Amit Bhattarai · Software engineer</span><span>Built with care. Ready to build more.</span></footer>
+  </div>
+</body>
+</html>
